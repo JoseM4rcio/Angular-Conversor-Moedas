@@ -1,0 +1,39 @@
+<div class="container position-absolute top-50 start-50 translate-middle p-3">
+  <h1 class="card-title text-center">
+    Conversor de Moedas
+  </h1>
+  <div class="mb-3"> Valor em Reais:
+    <input class="form-control input-group" name="real" type="number" [(ngModel)]="real">
+  </div>
+  <div class="mb-3"> Valor em Dólar:
+    <input class="form-control input-group" name="dolar" type="number" [(ngModel)]="dolar">
+  </div>
+  <div class="mb-3"> Valor em Euro:
+    <input class="form-control input-group" name="euro" type="number" [(ngModel)]="euro">
+  </div>
+  <div class="mb-3"> Valor em Libra:
+    <input class="form-control input-group" name="libra" type="number" [(ngModel)]="libra">
+  </div>
+  <button (click)="calculo()" class="btn text-bg-success mt-3">Calcular</button>
+  <div class="mb">
+    <div class="alert" style="display: block" name="dolar" role="alert">
+      <div *ngIf="converte" class="alert alert-success mt-2">
+        <h3>Reais em Dólar</h3>O valor R$ {{real}} é igual à {{converte.toFixed(2)}} Dólares {{result}}
+      </div>
+    </div>
+  </div>
+  <div class="mb">
+    <div class="alert" style="display: block" name="euro" role="alert">
+      <div *ngIf="converte" class="alert alert-success mt-2">
+        <h3>Reais em Euro</h3>O valor R$ {{real}} é igual à {{converte.toFixed(2)}} Euros {{result}}
+      </div>
+    </div>
+  </div>
+  <div class="mb">
+    <div class="alert" style="display: block" name="libra" role="alert">
+      <div *ngIf="converte" class="alert alert-success mt-2">
+        <h3>Reais em Libra</h3>O valor R$ {{real}} é igual à {{converte.toFixed(2)}} Libras {{result}}
+      </div>
+    </div>
+  </div>
+</div>
