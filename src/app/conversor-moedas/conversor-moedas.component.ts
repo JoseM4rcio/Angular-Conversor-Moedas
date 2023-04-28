@@ -10,12 +10,12 @@ export class ConversorMoedasComponent {
   dolar: number = 0;
   euro: number = 0;
   libra: number = 0;
-  result: string | null = null;
+  result: number | undefined;
   converte: number | undefined;
 
   calculo(){
-      this.converte = this.real * this.dolar;
-      this.converte = this.real * this.euro;
-      this.converte = this.real  * this.libra;
+      this.converte = this.real / this.dolar;
+      this.converte = this.real / this.euro;
+      this.converte = this.real  / this.libra;
   }
 }
